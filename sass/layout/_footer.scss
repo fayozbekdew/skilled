@@ -1,0 +1,25 @@
+.footer {
+background-color: $primary-color;
+padding-top: 3.2rem;
+padding-bottom: 3.2rem;
+&__btn{
+    @include blue;
+    @include fonts ($font-weight-medium, $text-middle-size, $text-middle-line);
+    color: $white-color;
+    text-align: center;
+    &:hover{
+        filter:brightness(3);
+    }
+}
+&__logo__img{
+    width: 11.4rem;
+    @include responsive (mobile){
+        width: 7.9rem;
+    }
+}
+}
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

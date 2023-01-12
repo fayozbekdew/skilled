@@ -1,0 +1,9 @@
+.site-btn{
+    width: 18.7rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-radius: 2.8rem;
+    @include responsive (mobile){
+        width: 15rem;
+    }
+}

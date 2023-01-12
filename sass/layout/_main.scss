@@ -1,0 +1,250 @@
+// HERO-SECTION
+
+.hero {
+padding-bottom: 20rem;
+@include responsive (tabletmin){
+    padding-bottom: 20rem;
+
+}
+
+position: relative;
+background-color: #F2F2F2;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    @include responsive (tabletmin){
+        flex-direction: column;
+        
+    }
+}
+.hero__info {
+    padding-right: 2rem;
+    &__text{
+    max-width: 44.5rem;
+    @include fonts ($font-weight-medium, $text-middle-size, $text-middle-line);
+    margin-bottom: 2.4rem;
+    }
+    &__title{
+    max-width: 45.7rem;
+    @include fonts ($font-weight-extrabold, $tittle-max-size, $tittle-max-line);
+    color: $primary-color;
+    margin-bottom: 2.4rem;
+    }
+    &__btn{
+    @include pink;
+    text-align: center;
+    @include fonts ($font-weight-medium, $text-middle-size, $text-middle-line);
+    color: $white-color;
+    &:hover{
+        filter:contrast(0.4);
+    }
+    }
+}
+
+.hero__bac {
+    width: 30rem;
+    display: block;
+    margin-left: auto;
+    margin-right: 10%;
+    @include responsive (tabletmin){
+        width: 253px;
+        height: 200px;
+        margin: 0;
+        margin-right: 0;
+        position: relative;
+    }
+    &__img{
+        display: none;
+        border-radius: 50%;
+        margin: 0;
+        @include responsive (tabletmin){
+            display: block;
+            margin-top: 10rem;
+            margin-right: 80%;
+            // position: absolute;
+            // left: 50%;
+            // transform: translate(-50%);
+            position: relative;
+        }
+    }
+}
+.hero__bac__result-1{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 3rem;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    right: 70px;
+    border-radius: 10px;
+    background-color: rgb(251, 251, 253);
+    @include responsive (tablet){
+        top: 100px;
+        right: 9px;
+    }
+    @include responsive (tabletmin){
+        min-width: 14.5rem;
+        top: 60px;
+        right: -60px;
+    }
+    @include responsive (mobile){
+        min-width: 11rem;
+        top: 90px;
+        right: -50px;
+    }
+    @include responsive (mobilemin){
+        right: -20px;
+    }
+}
+.hero__bac__result-2{
+    
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 3rem;
+    z-index: 2;
+    position: absolute;
+    top: 340px;
+    right: 260px;
+    border-radius: 10px;
+    background-color: rgb(251, 251, 253);
+    box-shadow: 0px 10px 10px 5px rgb(190, 190, 190);
+    @include responsive (tablet){
+    right: 180px;
+    }
+    @include responsive (tabletmin){
+        min-width: 14.5rem;
+        top: 280px;
+        right: 200px;
+    }
+    @include responsive (mobile){
+        min-width: 11rem;
+    }
+    @include responsive (mobilemin){
+        right: 150px;
+    }
+}
+.hero__bac__result__title{
+    @include fonts ($font-weight-extrabold, $tittle-middle-size, $tittle-max-line);
+    color: $primary-color;
+    @include responsive (tablet){
+        @include fonts ($font-weight-regular, $tittle-normal-size, $tittle-normal-line);
+    }
+    @include responsive (mobile){
+        @include fonts ($font-weight-regular, $tittle-easy-size, $tittle-easy-line);
+    }
+}
+.hero__bac__result__text{
+    @include fonts ($font-weight-medium, $text-middle-size, $text-middle-line);
+    color: $text-color;
+    @include responsive (tablet){
+        @include fonts ($font-weight-regular, $text-normal-size, $text-normal-line);
+    }
+    @include responsive (mobile){
+        @include fonts ($font-weight-regular, 1rem, 1)
+    }
+}
+.hero__bac::before{
+    content: "";
+    background-image: url(/images/gradient-img.png);
+    background-repeat: no-repeat;
+    width: 36.7rem;
+    height: 100rem;
+    position: absolute;
+    top: -300px;
+    right: 0;  
+    @include responsive (tablet){
+        width: 26.7rem;
+        height: 100rem;
+        top: -276px;
+        right: -20px;
+    }
+    @include responsive (tabletmin){
+        display: none;
+    }
+}
+.hero__bac::after{
+    content: "";
+    background-image: url(/images/girl-img.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 33.7rem;
+    height: 48rem;
+    position: absolute;
+    top: -53px;
+    right: 58px;  
+    border-bottom-left-radius:43%;
+    border-bottom-right-radius: 35%;
+    @include responsive (tablet){
+        width: 23.7rem;
+        top: 90px;
+        right: 30px;
+        border-bottom-right-radius:60px;
+    }
+    @include responsive (tabletmin){
+        display: none;
+    }
+}
+
+// FEATURES-SECTION
+
+.features {
+    padding-top: 10rem;
+    padding-bottom: 15rem;
+    background-color: #F0F1FF;
+    &__list{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 8rem;
+    column-gap: 3rem;
+    }
+    &__item{
+        &:nth-child(1){
+            @include pink;
+        }
+        max-width: 35rem;
+        // min-width: 35rem;
+        min-height: 32.2rem;
+        padding-top: 6.4rem;
+        padding-bottom: 4rem;
+        padding-left: 3.2rem;
+        padding-right: 3.2rem;
+        border-radius: 1.5rem;
+        position: relative;
+        background-color: $white-color;
+        &__midle-text{
+        @include fonts ($font-weight-extrabold, $tittle-normal-size, $tittle-normal-line);
+        color: $white-color;
+        }
+        &__title{
+        @include fonts ($font-weight-extrabold, $tittle-easy-size, $tittle-easy-line);
+        color: $primary-color;
+        // margin-top: 6.4rem;
+        margin-bottom: 2.4rem;
+        }
+        &__text{
+            max-width: 28.6rem;
+            min-height: 11.2rem;
+        @include fonts ($font-weight-medium, $text-middle-size, $text-middle-line);
+        color: $text-color;
+        margin-bottom: 2.4rem;
+        }
+        &__link{
+        @include fonts ($font-weight-bold, $text-middle-size, $text-middle-line);
+        color: $link-color;
+        &:hover{
+            opacity: 70%;
+        }
+        }
+        &__img{
+        position: absolute;
+        border-radius: 50%;
+        left: 30px;
+        top: -20px;
+        }
+    }
+}

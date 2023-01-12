@@ -1,0 +1,30 @@
+.header {
+
+padding-top: 5rem;
+padding-bottom: 5rem;
+background-color: #F2F2F2;
+@include responsive (tablet){
+    padding-bottom: 10rem;
+}
+&__btn{
+    z-index: 1;
+    background-color: $primary-color;
+    @include fonts ($font-weight-medium, $text-middle-size, $text-middle-line);
+    text-align: center;
+    color: $white-color;
+    &:hover{
+        background-color: $btn-hover;
+    }
+}
+&__logo__img{
+    width: 11.4rem;
+    @include responsive (mobile){
+        width: 7.9rem;
+    }
+}
+}
+.headr-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

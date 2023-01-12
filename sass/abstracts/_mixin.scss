@@ -1,0 +1,52 @@
+@mixin center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin fonts ($weight, $size, $line) {
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $line;
+}
+
+@mixin pink {
+    background: linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+}
+@mixin blue {
+    background: linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%);
+}
+
+@mixin mode($color) {
+    @if $color == black {
+        background-color: black;
+        color: #fff;
+    }
+    @else{
+        background-color: #fff;
+        color: black;
+    }
+    
+}
+
+@mixin responsive ($size) {
+    @if $size == tablet {
+        @media screen and (max-width:820px) {
+            @content;
+        }
+    }
+    @else if $size == tabletmin {
+        @media screen and (max-width:680px) {
+            @content;
+        }
+    }
+    @else if $size == mobile {
+        @media screen and (max-width:580px) {
+            @content;
+        }
+    }
+    @else if $size == mobilemin {
+        @media screen and (max-width:390px) {
+            @content
+        }
+    }
+}
